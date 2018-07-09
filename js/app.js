@@ -5,8 +5,8 @@ window.onload = function(){
 
 var teclas = document.getElementsByClassName('tecla')
 var pantalla = document.getElementById('display')
-var numero = pantalla.innerText
-var dos =0;
+var numero = pantalla.innerText;
+
 var operacion = 0;
 var operacionGuardada = '';
 var verificar = 0;
@@ -57,7 +57,8 @@ var calculadora = {
 	},
 
 	opera : function(operador){
-		if(operador == 'On'){
+		if(operador == 'on'){
+			console.log(operador);
 			this.reiniciar();
 		}else if(operador == 'punto'){
 			this.decimal();
@@ -92,9 +93,7 @@ var calculadora = {
 		}
 
 		if(operador == 'igual'){
-      dos = dos +1;
-      console.log('se ha presionado el igual '+ dos + ' veces');
-      console.log(operador);
+    	console.log(operador);
 			operacion = this.valida(operacion)
       console.log(operacion);
 			pantalla.innerText = operacion
